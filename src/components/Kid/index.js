@@ -11,7 +11,6 @@ const Kid = () => {
             setKidShoes(await apiData.kid)
         })()
     }, [])
-    // console.log(kidShoes)
     return (
         <>
         
