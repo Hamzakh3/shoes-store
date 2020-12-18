@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+flex-wrap: wrap;
+margin-bottom: 50px;
+
+}
+.container h1{
+    width: 100%;
+margin-top:57px ;
+background-color: #ffd932c2;
+color: rgb(32, 32, 32);
+padding: 10px 0px;
+border-bottom: 5px solid rgb(32, 32, 32);
+}
+
+@media screen and (max-width:353px){
+    .container h1{
+        width: 100%;
+    margin-top:100px ;
+    background-color: #ffd932c2;
+    color: rgb(32, 32, 32);
+    padding: 10px 0px;
+    border-bottom: 5px solid rgb(32, 32, 32);
+    }   
+}

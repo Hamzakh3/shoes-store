@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Routers from './Router'
+// import {Routes, Route} from 'react-router-dom'
+// import Home from './components/Home'
+// import Men from './components/Men'
+// import Women from './components/Women'
+// import Kid from './components/Kid'
+// import Contact from './components/Contact'
+// import Product from './components/Product'
 
 function App() {
+  const [shoes, setShoes] = useState([])
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routers />
+      <Footer />
     </div>
   );
 }
