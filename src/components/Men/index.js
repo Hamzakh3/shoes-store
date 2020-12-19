@@ -1,4 +1,3 @@
-import { StylesProvider } from "@material-ui/core"
 import { useEffect, useState } from "react"
 import ShoesList from '../../api'
 import Showcase from '../Showcase'

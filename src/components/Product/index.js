@@ -1,21 +1,22 @@
 import { useParams } from "react-router-dom"
-import { useState, useEffect } from 'react'
-import React from 'react'
+import React , { useState, useEffect } from 'react'
 import ShoesList from '../../api'
 import styles from './style.module.css'
 
 const Product = () => {
+    const { id } = useParams()
     const [shoes, setShoes] = useState(false)
+    console.log(id)
     useEffect(() => {
         (async () => {
             const apiData = await ShoesList()
             const data = await Object.keys(apiData).map((cat) => apiData[cat].filter((eachData) => eachData.id === id && eachData))
             const d = data.filter((a) => a.length && a)
             // console.log(d)
-            setShoes(await d[0][0])
+            setShoes(d[0][0])
         })()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-    const { id } = useParams()
     return (
         <>
             {shoes &&
